@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var buttonBackgroundImage: UIButton!
+    
+    
+    var moleWheel = MoleWheel()
+    var timer = NSTimer()
+    var photos = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +27,35 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    
+    func photoAndGameTimer(ti: Double, selector: Selector) {
+        timer = NSTimer.scheduledTimerWithTimeInterval(ti, target: self, selector: selector, userInfo: nil, repeats: true)
+    
+    }
+        
+    
+    @IBAction func moleHoleButton(sender: AnyObject) {
+         startGame()
+
+
+    }
+    
+
+    @IBAction func startButton(sender: AnyObject) {
+        startGame()
+        
+        
+    }
+    
+    func startGame() {
+        let photoIndex = moleWheel.getRandomPhotoIndex()
+        let currentImage = moleWheel.photos[photoIndex]
+        buttonBackgroundImage.setImage(currentImage, forState: UIControlState.Selected)
+        
+        
+    }
+    
 
 }
 

@@ -14,6 +14,7 @@
 		A11F0B151BBD99E000D26412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11F0B131BBD99E000D26412 /* LaunchScreen.storyboard */; };
 		A11F0B201BBD99E100D26412 /* WhackAMoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F0B1F1BBD99E100D26412 /* WhackAMoleTests.swift */; };
 		A11F0B2B1BBD99E200D26412 /* WhackAMoleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F0B2A1BBD99E200D26412 /* WhackAMoleUITests.swift */; };
+		C0FFC2321BBDAB6B0006D67B /* Moles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FFC2311BBDAB6B0006D67B /* Moles.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A11F0B261BBD99E100D26412 /* WhackAMoleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhackAMoleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11F0B2A1BBD99E200D26412 /* WhackAMoleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackAMoleUITests.swift; sourceTree = "<group>"; };
 		A11F0B2C1BBD99E200D26412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0FFC2311BBDAB6B0006D67B /* Moles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				A11F0B0A1BBD99DF00D26412 /* AppDelegate.swift */,
 				A11F0B0C1BBD99E000D26412 /* ViewController.swift */,
+				C0FFC2311BBDAB6B0006D67B /* Moles.swift */,
 				A11F0B0E1BBD99E000D26412 /* Main.storyboard */,
 				A11F0B111BBD99E000D26412 /* Assets.xcassets */,
 				A11F0B131BBD99E000D26412 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			files = (
 				A11F0B0D1BBD99E000D26412 /* ViewController.swift in Sources */,
 				A11F0B0B1BBD99DF00D26412 /* AppDelegate.swift in Sources */,
+				C0FFC2321BBDAB6B0006D67B /* Moles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +485,7 @@
 				A11F0B311BBD99E200D26412 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A11F0B321BBD99E200D26412 /* Build configuration list for PBXNativeTarget "WhackAMoleTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				A11F0B341BBD99E200D26412 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A11F0B351BBD99E200D26412 /* Build configuration list for PBXNativeTarget "WhackAMoleUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +503,7 @@
 				A11F0B371BBD99E200D26412 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
