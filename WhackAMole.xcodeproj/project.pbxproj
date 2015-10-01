@@ -481,6 +481,7 @@
 				A11F0B311BBD99E200D26412 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A11F0B321BBD99E200D26412 /* Build configuration list for PBXNativeTarget "WhackAMoleTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +490,7 @@
 				A11F0B341BBD99E200D26412 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A11F0B351BBD99E200D26412 /* Build configuration list for PBXNativeTarget "WhackAMoleUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +499,7 @@
 				A11F0B371BBD99E200D26412 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
