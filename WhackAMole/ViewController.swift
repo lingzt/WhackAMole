@@ -9,16 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+
+    @IBOutlet weak var ImageView: UIImageView!
     
-    @IBOutlet weak var buttonBackgroundImage: UIButton!
-    
-    
-    var moleWheel = MoleWheel()
+//    var moleWheel = MoleWheel()
     var timer = NSTimer()
-    var photos = [String]()
+    var photos = ["Donovan.jpg", "Melissa.jpg", "Ling.jpg", "Andrew.jpg", "Brian.jpg", "Charles.jpg", "erika.jpg", "Joel.jpg", "Robb.jpg", "Tim.jpg", "david.jpg", "kate.jpg", "george.jpg", "amelia.jpg", "craig.jpg"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
     }
 
@@ -35,23 +36,26 @@ class ViewController: UIViewController {
     }
         
     
-    @IBAction func moleHoleButton(sender: AnyObject) {
-         startGame()
-
-
-    }
-    
 
     @IBAction func startButton(sender: AnyObject) {
         startGame()
-        
+        let randomPhoto = Int(arc4random_stir())
+        var photo = photos[randomPhoto]
+        ImageView.image = UIImage(named: photo)
+    
         
     }
     
     func startGame() {
-        let photoIndex = moleWheel.getRandomPhotoIndex()
-        let currentImage = moleWheel.photos[photoIndex]
-        buttonBackgroundImage.setImage(currentImage, forState: UIControlState.Selected)
+        
+//        let unsignedArrayCount = UInt32(photos.count)
+//        let randomPhoto = arc4random_uniform(unsignedArrayCount)
+//        ImageView.image = UIImage(named: randomPhoto)
+        
+        
+//        let photoIndex = moleWheel.getRandomPhotoIndex()
+//        let currentImage = moleWheel.photos[photoIndex]
+        
         
         
     }
