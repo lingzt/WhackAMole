@@ -16,8 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNq-B3-j6l">
-                                <rect key="frame" x="0.0" y="0.0" width="179" height="169"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNq-B3-j6l">
+                                <rect key="frame" x="0.0" y="0.0" width="114" height="116"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="92j-Bb-8yD" appends="YES" id="hIK-6c-4n6"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxG-JM-t03">
                                 <rect key="frame" x="143" y="242" width="34" height="30"/>
@@ -26,14 +30,36 @@
                                     <action selector="startButton:" destination="EVi-CG-xsz" eventType="touchUpInside" id="SWL-aE-lew"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="icF-GT-X5Y">
+                                <rect key="frame" x="112" y="0.0" width="123" height="116"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mole Hit Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ky-4I-3gl">
+                                <rect key="frame" x="101" y="362" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bu-yG-csH">
+                                <rect key="frame" x="143" y="391" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="ImageView" destination="NNq-B3-j6l" id="OkB-Qf-UGm"/>
+                        <outlet property="imageView" destination="NNq-B3-j6l" id="HJa-mj-d4b"/>
+                        <outlet property="imageViewTwo" destination="icF-GT-X5Y" id="N1U-wT-cjo"/>
+                        <outlet property="moleHitCountLabel" destination="8bu-yG-csH" id="upX-JE-4rA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVS-hj-fBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="92j-Bb-8yD">
+                    <connections>
+                        <action selector="photoTapped:" destination="EVi-CG-xsz" id="39g-HT-fmq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="477" y="-16"/>
         </scene>

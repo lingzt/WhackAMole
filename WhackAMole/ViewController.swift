@@ -10,12 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var ImageView: UIImageView!
-    
-//    var moleWheel = MoleWheel()
+
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewTwo: UIImageView!
+    @IBOutlet weak var moleHitCountLabel: UILabel!
+
+
     var timer = NSTimer()
-    var photos = ["Donovan.jpg", "Melissa.jpg", "Ling.jpg", "Andrew.jpg", "Brian.jpg", "Charles.jpg", "erika.jpg", "Joel.jpg", "Robb.jpg", "Tim.jpg", "david.jpg", "kate.jpg", "george.jpg", "amelia.jpg", "craig.jpg"]
+    var moleHitCount = 0
     
+    var photos = ["Donovan.jpg", "Melissa.jpg", "Ling.jpg", "Andrew.jpg", "Brian.jpg", "Charles.jpg", "erika.jpg", "Joel.jpg", "Robb.jpg", "Tim.jpg", "david.jpg", "kate.jpg", "george.jpg", "amelia.jpg", "craig.jpg", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png", "moleHole.png"]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,27 +41,30 @@ class ViewController: UIViewController {
     }
         
     
-
-    @IBAction func startButton(sender: AnyObject) {
-        startGame()
-        let randomPhoto = Int(arc4random_stir())
-        var photo = photos[randomPhoto]
-        ImageView.image = UIImage(named: photo)
-    
+    @IBAction func photoTapped(sender: AnyObject) {
+        
+        if imageView.image! != UIImage(named: "moleHole.png") {
+            moleHitCount++
+            moleHitCountLabel.text = "\(moleHitCount)"
+            
+        }
         
     }
-    
-    func startGame() {
+
+    @IBAction func startButton(sender: AnyObject) {
+        randomPhotoGenerator()
+        photoAndGameTimer(0.5, selector: "randomPhotoGenerator")
+       
         
-//        let unsignedArrayCount = UInt32(photos.count)
-//        let randomPhoto = arc4random_uniform(unsignedArrayCount)
-//        ImageView.image = UIImage(named: randomPhoto)
+    }
+
         
-        
-//        let photoIndex = moleWheel.getRandomPhotoIndex()
-//        let currentImage = moleWheel.photos[photoIndex]
-        
-        
+        func randomPhotoGenerator() {
+            let randomPhoto = Int(arc4random_uniform(39))
+            let photo = photos[randomPhoto]
+            imageView.image = UIImage(named: photo)
+//            imageViewTwo.image = UIImage(named: photo)
+            
         
     }
     
